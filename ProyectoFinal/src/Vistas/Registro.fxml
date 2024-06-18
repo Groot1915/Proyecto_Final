@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2e3947;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.RegistroController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="320.0">
+         <children>
+            <HBox prefHeight="24.0" prefWidth="215.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="24.0" prefWidth="24.0" style="-fx-background-color: #ffffff; -fx-background-radius: 50%;">
+                     <children>
+                        <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: HAND;">
+                           <image>
+                              <Image url="@../images/Imagen6.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <ImageView fitHeight="149.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Imagen2.png" />
+               </image>
+            </ImageView>
+            <VBox prefHeight="101.0" prefWidth="272.0">
+               <children>
+                  <Label text="Correo Electrónico" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label text="Nombre de Usuario" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <HBox alignment="CENTER" prefHeight="75.0" prefWidth="310.0">
+                     <children>
+                        <VBox prefHeight="43.0" prefWidth="220.0">
+                           <children>
+                              <Label text="Contraseña" textFill="WHITE">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField prefHeight="26.0" prefWidth="148.0">
+                                 <VBox.margin>
+                                    <Insets right="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="100.0" prefWidth="220.0">
+                           <children>
+                              <Label text="Fecha de Nacimiento" textFill="WHITE">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </VBox.margin>
+            </VBox>
+            <Button mnemonicParsing="false" style="-fx-background-color: #6C7BEB; -fx-background-radius: 50;" text="Registrarse" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <AnchorPane prefHeight="400.0" prefWidth="118.0">
+         <children>
+            <ImageView fitHeight="406.0" fitWidth="302.0" layoutX="-4.0" layoutY="-7.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/imagen3.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
