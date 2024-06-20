@@ -37,7 +37,7 @@ public class LoginController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    
+    //pasar de vistas ejm "registrar/login"
     private void loadStage(String url, Event event){
         try {
             
