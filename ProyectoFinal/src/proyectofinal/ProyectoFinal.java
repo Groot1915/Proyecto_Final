@@ -17,7 +17,7 @@ public class ProyectoFinal extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        Parent root = FXMLLoader.load(getClass().getResource("/Vistas/Principal.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/Vistas/Login.fxml"));
         
         Scene scene = new Scene(root);
         stage.setScene(scene);

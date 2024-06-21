@@ -1,6 +1,7 @@
 package Classes;
 
 import Classes.Structures.*; // Importa las estructuras de datos (colas, pilas, usando listas enlazadas)
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Usuario {
@@ -9,13 +10,13 @@ private String nombre;
 private String correo;
 private String password;
 private String fotoPerfil;
-private Date fechaNacimiento;
+private LocalDate fechaNacimiento;
 private Cola carrito;
 private Cola deseos;
 private Pila historial;
 
     /////////////////////// Constructor///////////////////////
-    public Usuario(String n, String c, String pw, String fp, Date fn){
+    public Usuario(String n, String c, String pw, String fp, LocalDate fn){
         this.nombre = n;
         this.correo = c;
         this.password = pw;
@@ -62,11 +63,11 @@ private Pila historial;
         this.fotoPerfil = fotoPerfil;
     }
 
-    public Date getFechaNacimiento() {
+    public LocalDate getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 
