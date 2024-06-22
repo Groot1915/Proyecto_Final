@@ -1,6 +1,7 @@
 package Classes.Structures;
 
 import Classes.Nodos.NodoProducto;
+import javafx.scene.image.Image;
 
 public class Pila {
     

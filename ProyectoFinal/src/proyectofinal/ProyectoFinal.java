@@ -11,8 +11,9 @@ import javafx.stage.Stage;
 
 public class ProyectoFinal extends Application {
     
-    public static ArrayList<Usuario> Usuarios = new ArrayList<Usuario>();
+    public static ArrayList<Usuario> Usuarios = new ArrayList<>();
     public static Cola Productos = new Cola();
+    public static Stage sFinal = new Stage();
 
     @Override
     public void start(Stage stage) throws Exception {

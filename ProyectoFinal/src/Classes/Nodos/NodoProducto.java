@@ -1,5 +1,7 @@
 package Classes.Nodos;
 
+import javafx.scene.image.Image;
+
 public class NodoProducto {
  
     public String nombre;

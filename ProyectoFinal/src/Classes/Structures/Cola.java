@@ -1,6 +1,7 @@
 package Classes.Structures;
 
 import Classes.Nodos.NodoProducto;
+import javafx.scene.image.Image;
 
 public class Cola {
     
@@ -18,7 +19,7 @@ public class Cola {
         nError.nombre = "";
         nError.descripcion = "";
         nError.autor = "";
-        nError.rutaImagen = "";
+        nError.rutaImagen = null;
         nError.id = -1;
         
         return nError;
@@ -108,6 +109,22 @@ public class Cola {
                 }
             }
         }
+    }
+    
+    // Metodo para confirmar que un elemento con un determinado id existes
+    public boolean existeID(int id){
+        if(!colaVacia()){
+            NodoProducto n = inicioCola;
+            
+            while(n != null){
+                if(n.id == id){
+                    return true;
+                } else{
+                    n = n.siguiente;
+                }
+            }
+        }
+        return false;
     }
     
     // Metodo para obtener los nodos en array

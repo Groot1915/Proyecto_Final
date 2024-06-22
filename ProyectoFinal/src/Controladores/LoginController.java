@@ -32,6 +32,7 @@ import javafx.stage.Window;
 import javafx.stage.WindowEvent;
 import javax.swing.JOptionPane;
 import static proyectofinal.ProyectoFinal.Usuarios;
+import static proyectofinal.ProyectoFinal.sFinal;
 
 /**
  * FXML Controller class
@@ -128,6 +129,7 @@ public class LoginController implements Initializable {
             Stage newStage = new Stage();
             newStage.setScene(scene);
             newStage.show();
+            sFinal = newStage;
 
             newStage.setOnCloseRequest(new EventHandler<WindowEvent>(){
                 @Override
