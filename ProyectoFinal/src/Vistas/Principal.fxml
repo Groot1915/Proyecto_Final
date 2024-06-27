@@ -33,7 +33,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <ImageView fitHeight="38.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/imagenAnonimo.png" />
                </image>
@@ -41,7 +41,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                <HBox.margin>
-                  <Insets right="8.0" />
+                  <Insets right="6.0" />
                </HBox.margin>
             </ImageView>
             <ImageView fitHeight="33.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
@@ -79,27 +79,223 @@
             <Insets />
          </VBox.margin>
       </HBox>
-      <ScrollPane prefHeight="354.0" prefWidth="600.0" style="-fx-background-color: #2e3947;">
+      <ScrollPane hbarPolicy="NEVER" prefHeight="354.0" prefWidth="600.0" style="-fx-background-color: #2e3947;" vbarPolicy="ALWAYS">
          <content>
-            <VBox prefHeight="200.0" prefWidth="599.0" style="-fx-background-color: #2e3947;">
-               <padding>
-                  <Insets left="10.0" right="10.0" />
-               </padding>
+            <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Label text="Infantiles" textFill="WHITE">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <HBox prefHeight="157.0" prefWidth="579.0">
+                  <VBox prefHeight="200.0" prefWidth="599.0" style="-fx-background-color: #2e3947;">
                      <children>
-                        <ImageView fitHeight="224.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/Portada1.png" />
-                           </image>
-                        </ImageView>
+                        <Label text="Infantiles" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="5.0" right="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="157.0" prefWidth="579.0">
+                           <children>
+                              <Label text="&lt;" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="2.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                              <ImageView fitHeight="230.0" fitWidth="130.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../images/PortadaI1.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <ImageView fitHeight="230.0" fitWidth="130.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../images/PortadaI2.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <ImageView fitHeight="230.0" fitWidth="130.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../images/PortadaI3.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <ImageView fitHeight="230.0" fitWidth="130.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../images/PortadaI4.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label text="&gt;" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="2.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                           </children>
+                        </HBox>
                      </children>
-                  </HBox>
+                     <padding>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="599.0" style="-fx-background-color: #2e3947;">
+                     <children>
+                        <Label text="Juveniles" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="5.0" right="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="157.0" prefWidth="579.0">
+                           <children>
+                              <Label text="&lt;" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="2.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                              <ImageView fitHeight="230.0" fitWidth="130.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../images/PortadaJ1.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <ImageView fitHeight="230.0" fitWidth="130.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../images/PortadaJ2.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <ImageView fitHeight="230.0" fitWidth="130.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../images/PortadaJ3.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <ImageView fitHeight="230.0" fitWidth="130.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../images/PortadaJ4.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label text="&gt;" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="2.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="599.0" style="-fx-background-color: #2e3947;">
+                     <children>
+                        <Label text="Clásicos" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="5.0" right="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="157.0" prefWidth="579.0">
+                           <children>
+                              <Label text="&lt;" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="2.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                              <ImageView fitHeight="230.0" fitWidth="130.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../images/PortadaC1.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <ImageView fitHeight="230.0" fitWidth="130.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../images/PortadaC2.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <ImageView fitHeight="230.0" fitWidth="130.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../images/PortadaC3.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <ImageView fitHeight="230.0" fitWidth="130.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../images/PortadaC4.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label text="&gt;" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="2.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
                </children>
             </VBox>
          </content>

@@ -5,6 +5,7 @@
 package Controladores;
 
 
+import Classes.Archivos;
 import Classes.Usuario;
 import java.io.IOException;
 import java.net.URL;
@@ -37,6 +38,8 @@ import static proyectofinal.ProyectoFinal.sFinal;
 public class RegistroController implements Initializable {
 
     // Variables
+    Archivos ar = new Archivos();
+    
     @FXML
     private Button botonRegistro;
     @FXML
@@ -58,7 +61,7 @@ public class RegistroController implements Initializable {
 
     // Evento para registrarse
     @FXML
-    void onAction(ActionEvent event) {
+    void onAction(ActionEvent event) throws IOException {
         Object evt = event.getSource();
         
         if(evt.equals(botonRegistro)){
@@ -66,17 +69,22 @@ public class RegistroController implements Initializable {
             if(!registroContra.getText().isEmpty() && !registroCorreo.getText().isEmpty() && !String.valueOf(registroFecha.getValue()).isEmpty() &&
             !registroUsuario.getText().isEmpty()){
                 
-                String correo = registroCorreo.getText();
-                String contra = registroContra.getText();
-                String usuario = registroUsuario.getText();
-                LocalDate fecha = registroFecha.getValue();
-                String foto = "";
-                
-                Usuario u = new Usuario(usuario,correo,contra,foto,fecha);
-                Usuarios.add(u);
-                limpiarCampos();
-                JOptionPane.showMessageDialog(null, "¡Registro exitoso!");
-                
+                if(!registroUsuario.getText().equals("Admin")){
+                    String correo = registroCorreo.getText();
+                    String contra = registroContra.getText();
+                    String usuario = registroUsuario.getText();
+                    LocalDate fecha = registroFecha.getValue();
+                    String foto = "";
+
+                    Usuario u = new Usuario(usuario,correo,contra,foto,fecha);
+                    Usuarios.add(u);
+                    ar.escribirUsuarios();
+                    limpiarCampos();
+                    JOptionPane.showMessageDialog(null, "¡Registro exitoso!");
+                } else{
+                    JOptionPane.showMessageDialog(null, "Nombre de usuario no valido");
+                }
+   
             }else{
                 JOptionPane.showMessageDialog(null, "Todos los campos son obligatorios");
             }

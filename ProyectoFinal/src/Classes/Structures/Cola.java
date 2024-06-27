@@ -1,10 +1,12 @@
 package Classes.Structures;
 
 import Classes.Nodos.NodoProducto;
-import javafx.scene.image.Image;
+import java.io.Serializable;
+import java.util.ArrayList;
 
-public class Cola {
+public class Cola implements Serializable{
     
+    private static final long serialVersionUID  =  -1481805510286716457L;
     private NodoProducto inicioCola, finalCola;
     private int id = 0;
     
@@ -35,12 +37,13 @@ public class Cola {
     }
     
     // Metodo para insertar a la cola
-    public void insertarCola(String nombre, String autor, String descripcion, String rutaImagen){
+    public void insertarCola(String nombre, String autor, String descripcion, String rutaImagen, String tipo){
         NodoProducto n = new NodoProducto();
         n.nombre = nombre;
         n.autor = autor;
         n.descripcion = descripcion;
         n.rutaImagen = rutaImagen;
+        n.tipo = tipo;
         n.id = getId();
         n.siguiente = null;
         id++;
@@ -128,16 +131,13 @@ public class Cola {
     }
     
     // Metodo para obtener los nodos en array
-    public NodoProducto[] obtenerNodosCola(){
+    public ArrayList<NodoProducto> obtenerNodosCola(){
         NodoProducto n = inicioCola;
-        NodoProducto[] arrProductos = new NodoProducto[this.tamCola()];
+        ArrayList<NodoProducto> arrProductos = new ArrayList<>();
         
-        for(int i = 0; i < this.tamCola(); i++){
-            if(i == 0){
-                arrProductos[i] = n;
-            } else{
-                arrProductos[i] = n.siguiente;
-            }
+        while(n != null){
+            arrProductos.add(n);
+            n = n.siguiente;
         }
         
         return arrProductos;

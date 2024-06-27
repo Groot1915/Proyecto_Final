@@ -4,6 +4,7 @@
  */
 package Controladores;
 
+import Classes.Archivos;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -12,6 +13,8 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Platform;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.Initializable;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
@@ -22,6 +25,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
@@ -59,8 +63,17 @@ public class AdministradorController implements Initializable {
     private Label botonSubirCara;
     @FXML
     private ImageView botonAtras;
+    @FXML
+    private ComboBox<String> comboRegistro;
     
+    ObservableList<String> listaOpciones = 
+            FXCollections.observableArrayList(
+                "Infantiles",
+                "Juveniles",
+                "Clasicos"
+            );
     private String imagen = "";
+    Archivos ar = new Archivos();
     
     
     @FXML
@@ -125,7 +138,7 @@ public class AdministradorController implements Initializable {
     }
 
     @FXML
-    void onAction(ActionEvent event) {
+    void onAction(ActionEvent event) throws IOException {
         Object evt = event.getSource();
         
         if(evt.equals(botonCrear)){
@@ -133,7 +146,9 @@ public class AdministradorController implements Initializable {
                 String nombreLibro = adminNLibro.getText();
                 String nombreAutor = adminNAutor.getText();
                 String descripcion = adminNDes.getText();
-                Productos.insertarCola(nombreLibro, nombreAutor, descripcion, imagen);
+                String tipo = comboRegistro.getValue();
+                Productos.insertarCola(nombreLibro, nombreAutor, descripcion, imagen, tipo);
+                ar.escribirProductos();
                 limpiarCamposCrear();
                 JOptionPane.showMessageDialog(null, "¡Libro creado exitosamente!");
             }else{
@@ -203,7 +218,8 @@ public class AdministradorController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        comboRegistro.setItems(listaOpciones);
+        comboRegistro.setValue("Infantiles");
     }    
 
 

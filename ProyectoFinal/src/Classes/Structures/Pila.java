@@ -1,9 +1,10 @@
 package Classes.Structures;
 
 import Classes.Nodos.NodoProducto;
-import javafx.scene.image.Image;
+import java.io.Serializable;
 
-public class Pila {
+
+public class Pila implements Serializable{
     
     private NodoProducto ultimoValorIngresado;
     int tam = 0;
