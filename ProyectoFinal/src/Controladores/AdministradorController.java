@@ -65,6 +65,8 @@ public class AdministradorController implements Initializable {
     private ImageView botonAtras;
     @FXML
     private ComboBox<String> comboRegistro;
+    @FXML
+    private TextField adminNPrecio;
     
     ObservableList<String> listaOpciones = 
             FXCollections.observableArrayList(
@@ -132,9 +134,14 @@ public class AdministradorController implements Initializable {
                     adminIdLibro.setText("");
                 }
             }
+        } else if(evt.equals(adminNPrecio)){
+            if(adminNPrecio.getText().length() != 0){
+                if(!adminNPrecio.getText().substring(adminNPrecio.getText().length() -1).matches("[0-9]")){
+                    JOptionPane.showMessageDialog(null, "Ingrese un caracter válido");
+                    adminNPrecio.setText("");
+                }
+            }
         }
-            
-        
     }
 
     @FXML
@@ -142,12 +149,13 @@ public class AdministradorController implements Initializable {
         Object evt = event.getSource();
         
         if(evt.equals(botonCrear)){
-            if(!adminNLibro.getText().isEmpty() && !adminNAutor.getText().isEmpty() && !adminNDes.getText().isEmpty() && !this.getImagen().equals("")){
+            if(!adminNLibro.getText().isEmpty() && !adminNAutor.getText().isEmpty() && !adminNDes.getText().isEmpty() && !this.getImagen().equals("") && !adminNPrecio.getText().isEmpty()){
                 String nombreLibro = adminNLibro.getText();
                 String nombreAutor = adminNAutor.getText();
                 String descripcion = adminNDes.getText();
                 String tipo = comboRegistro.getValue();
-                Productos.insertarCola(nombreLibro, nombreAutor, descripcion, imagen, tipo);
+                int precio = Integer.parseInt(adminNPrecio.getText());
+                Productos.insertarCola(nombreLibro, nombreAutor, descripcion, imagen, tipo, precio);
                 ar.escribirProductos();
                 limpiarCamposCrear();
                 JOptionPane.showMessageDialog(null, "¡Libro creado exitosamente!");
@@ -159,6 +167,7 @@ public class AdministradorController implements Initializable {
     
                 if(Productos.existeID(Integer.parseInt(adminIdLibro.getText()))){
                     Productos.eliminarCola(Integer.parseInt(adminIdLibro.getText()));
+                    ar.escribirProductos();
                     JOptionPane.showMessageDialog(null, "¡Elemento eliminado correctamente!");
                 }else{
                     JOptionPane.showMessageDialog(null, "Elemento no existe, ingrese un id valido");
@@ -213,6 +222,7 @@ public class AdministradorController implements Initializable {
         adminNLibro.setText("");
         adminNAutor.setText("");
         adminNDes.setText("");
+        adminNPrecio.setText("");
         this.setImagen("");
     }
     

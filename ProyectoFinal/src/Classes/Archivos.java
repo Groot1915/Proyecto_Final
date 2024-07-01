@@ -9,7 +9,7 @@ import static proyectofinal.ProyectoFinal.Productos;
 public class Archivos {
 
     public void escribirUsuarios() throws FileNotFoundException, IOException{
-        File file = new File("C:\\Users\\Jorge\\Documents\\Proyecto_Final\\ProyectoFinal\\src\\Archivos\\Usuarios.txt");
+        File file = new File("/home/juan/NetBeansProjects/ProyectoFinal/src/Archivos/Usuarios.txt");
         ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file));
         oos.writeObject(Usuarios);
         oos.close();
@@ -17,7 +17,7 @@ public class Archivos {
     }
     
     public void leerUsuarios() throws FileNotFoundException, IOException, ClassNotFoundException{
-        File file = new File("C:\\Users\\Jorge\\Documents\\Proyecto_Final\\ProyectoFinal\\src\\Archivos\\Usuarios.txt");
+        File file = new File("/home/juan/NetBeansProjects/ProyectoFinal/src/Archivos/Usuarios.txt");
         ObjectInputStream ois =  new ObjectInputStream(new FileInputStream(file));
         Usuarios = (ArrayList<Usuario>)ois.readObject();
         ois.close();
@@ -37,7 +37,7 @@ public class Archivos {
         ObjectInputStream ois =  new ObjectInputStream(new FileInputStream(file));
         Productos = (Cola)ois.readObject();
         ois.close();
-        System.out.println("Archivo Usuario leido correctamente");
+        System.out.println("Archivo Productos leido correctamente");
     }
       
 }

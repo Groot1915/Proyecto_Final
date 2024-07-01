@@ -11,5 +11,6 @@ public class NodoProducto implements Serializable{
     public String rutaImagen;
     public String tipo;
     public int id;
+    public int precio;
     public NodoProducto siguiente;
 }

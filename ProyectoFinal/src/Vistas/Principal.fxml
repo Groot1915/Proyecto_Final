@@ -10,19 +10,27 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2e3947;" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2e3947;" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.PrincipalController">
    <children>
       <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="639.0" style="-fx-background-color: #F4EAEA;">
          <children>
-            <Label prefHeight="29.0" prefWidth="392.0" text="Bienvenido [nombre]">
+            <Label alignment="CENTER" prefHeight="25.0" prefWidth="119.0" text="Bienvenido ">
                <font>
                   <Font size="20.0" />
                </font>
                <HBox.margin>
-                  <Insets left="10.0" />
+                  <Insets left="15.0" />
                </HBox.margin>
             </Label>
-            <ImageView fitHeight="21.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+            <Label fx:id="principalNombre" prefHeight="29.0" prefWidth="274.0" text="Nombre" textFill="#6c7beb">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <ImageView fx:id="principalRegreso" fitHeight="21.0" fitWidth="25.0" onMouseClicked="#mouseClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Imagen6.png" />
                </image>
@@ -33,7 +41,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="principalUsuario" fitHeight="33.0" fitWidth="32.0" onMouseClicked="#mouseClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/imagenAnonimo.png" />
                </image>
@@ -44,7 +52,7 @@
                   <Insets right="6.0" />
                </HBox.margin>
             </ImageView>
-            <ImageView fitHeight="33.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="principalHistorial" fitHeight="33.0" fitWidth="29.0" onMouseClicked="#mouseClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/imagen%2013.png" />
                </image>
@@ -55,7 +63,7 @@
                   <Insets right="8.0" />
                </HBox.margin>
             </ImageView>
-            <ImageView fitHeight="34.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="principalCarrito" fitHeight="34.0" fitWidth="33.0" onMouseClicked="#mouseClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Imagen4.png" />
                </image>
@@ -66,7 +74,7 @@
                   <Insets right="8.0" />
                </HBox.margin>
             </ImageView>
-            <ImageView fitHeight="33.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="principalFavoritos" fitHeight="33.0" fitWidth="31.0" onMouseClicked="#mouseClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Imagen5.png" />
                </image>
@@ -95,7 +103,7 @@
                         </Label>
                         <HBox alignment="CENTER" prefHeight="157.0" prefWidth="579.0">
                            <children>
-                              <Label text="&lt;" textFill="WHITE">
+                              <Label fx:id="infantilFIzquierda" onMouseClicked="#mouseClicked" text="&lt;" textFill="WHITE">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -106,36 +114,36 @@
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
                               </Label>
-                              <ImageView fitHeight="230.0" fitWidth="130.0" pickOnBounds="true">
-                                 <image>
-                                    <Image url="@../images/PortadaI1.jpg" />
-                                 </image>
+                              <ImageView fx:id="infantil1" fitHeight="230.0" fitWidth="130.0" onMouseClicked="#mouseClicked" pickOnBounds="true">
                                  <HBox.margin>
                                     <Insets right="5.0" />
                                  </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </ImageView>
-                              <ImageView fitHeight="230.0" fitWidth="130.0" pickOnBounds="true">
-                                 <image>
-                                    <Image url="@../images/PortadaI2.jpg" />
-                                 </image>
+                              <ImageView fx:id="infantil2" fitHeight="230.0" fitWidth="130.0" onMouseClicked="#mouseClicked" pickOnBounds="true">
                                  <HBox.margin>
                                     <Insets right="5.0" />
                                  </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </ImageView>
-                              <ImageView fitHeight="230.0" fitWidth="130.0" pickOnBounds="true">
-                                 <image>
-                                    <Image url="@../images/PortadaI3.jpg" />
-                                 </image>
+                              <ImageView fx:id="infantil3" fitHeight="230.0" fitWidth="130.0" onMouseClicked="#mouseClicked" pickOnBounds="true">
                                  <HBox.margin>
                                     <Insets right="5.0" />
                                  </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </ImageView>
-                              <ImageView fitHeight="230.0" fitWidth="130.0" pickOnBounds="true">
-                                 <image>
-                                    <Image url="@../images/PortadaI4.jpg" />
-                                 </image>
+                              <ImageView fx:id="infantil4" fitHeight="230.0" fitWidth="130.0" onMouseClicked="#mouseClicked" pickOnBounds="true">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </ImageView>
-                              <Label text="&gt;" textFill="WHITE">
+                              <Label fx:id="infantilFDerecha" onMouseClicked="#mouseClicked" text="&gt;" textFill="WHITE">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -205,7 +213,7 @@
                                     <Image url="@../images/PortadaJ4.jpg" />
                                  </image>
                               </ImageView>
-                              <Label text="&gt;" textFill="WHITE">
+                              <Label fx:id="juvenilesFIzq" text="&gt;" textFill="WHITE">
                                  <font>
                                     <Font size="20.0" />
                                  </font>

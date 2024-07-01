@@ -37,13 +37,14 @@ public class Cola implements Serializable{
     }
     
     // Metodo para insertar a la cola
-    public void insertarCola(String nombre, String autor, String descripcion, String rutaImagen, String tipo){
+    public void insertarCola(String nombre, String autor, String descripcion, String rutaImagen, String tipo, int precio){
         NodoProducto n = new NodoProducto();
         n.nombre = nombre;
         n.autor = autor;
         n.descripcion = descripcion;
         n.rutaImagen = rutaImagen;
         n.tipo = tipo;
+        n.precio = precio;
         n.id = getId();
         n.siguiente = null;
         id++;

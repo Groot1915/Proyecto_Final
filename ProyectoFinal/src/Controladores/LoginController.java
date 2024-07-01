@@ -33,6 +33,7 @@ import javafx.stage.WindowEvent;
 import javax.swing.JOptionPane;
 import static proyectofinal.ProyectoFinal.Usuarios;
 import static proyectofinal.ProyectoFinal.sFinal;
+import static proyectofinal.ProyectoFinal.uActivo;
 
 /**
  * FXML Controller class
@@ -67,6 +68,7 @@ public class LoginController implements Initializable {
                 }
                 for(int i = 0; i < Usuarios.size(); i++){
                     if(loginUsuario.getText().equals(Usuarios.get(i).getNombre()) && loginContra.getText().equals(Usuarios.get(i).getPassword())){
+                        uActivo = Usuarios.get(i);
                         loadStage("/Vistas/Principal.fxml", event);
                         return;
                     }

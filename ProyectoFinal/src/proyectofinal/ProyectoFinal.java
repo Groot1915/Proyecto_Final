@@ -15,11 +15,12 @@ public class ProyectoFinal extends Application {
     public static ArrayList<Usuario> Usuarios = new ArrayList<>();
     public static Cola Productos = new Cola();
     public static Stage sFinal = new Stage();
+    public static Usuario uActivo;
     Archivos ar = new Archivos();
 
     @Override
     public void start(Stage stage) throws Exception {
-//        ar.leerProductos();
+        ar.leerProductos();
         ar.leerUsuarios();
 
         Parent root = FXMLLoader.load(getClass().getResource("/Vistas/Login.fxml"));
