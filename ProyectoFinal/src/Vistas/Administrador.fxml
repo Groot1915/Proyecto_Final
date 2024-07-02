@@ -49,9 +49,10 @@
          <children>
             <TableView fx:id="adminTabla" prefHeight="331.0" prefWidth="287.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="Titulo" />
-                <TableColumn prefWidth="75.0" text="Autor" />
-                  <TableColumn prefWidth="75.0" text="Id" />
+                <TableColumn fx:id="columna1" editable="false" prefWidth="84.0" sortable="false" text="Titulo" />
+                <TableColumn fx:id="columna2" editable="false" prefWidth="78.0" sortable="false" text="Autor" />
+                  <TableColumn fx:id="columna3" editable="false" prefWidth="41.0" sortable="false" text="Id" />
+                  <TableColumn fx:id="columna4" editable="false" prefWidth="76.0" sortable="false" text="Categoria" />
               </columns>
                <HBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -110,7 +111,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <TextArea fx:id="adminNDes" prefHeight="80.0" prefWidth="289.0">
+                        <TextArea fx:id="adminNDes" prefHeight="80.0" prefWidth="289.0" style="-fx-wrap-text: true;">
                            <font>
                               <Font size="14.0" />
                            </font>

@@ -16,6 +16,7 @@ public class ProyectoFinal extends Application {
     public static Cola Productos = new Cola();
     public static Stage sFinal = new Stage();
     public static Usuario uActivo;
+    public static int idLibroGeneral;
     Archivos ar = new Archivos();
 
     @Override

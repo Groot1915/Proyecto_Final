@@ -119,7 +119,7 @@
                                     <Insets right="5.0" />
                                  </HBox.margin>
                                  <cursor>
-                                    <Cursor fx:constant="HAND" />
+                                    <Cursor fx:constant="DEFAULT" />
                                  </cursor>
                               </ImageView>
                               <ImageView fx:id="infantil2" fitHeight="230.0" fitWidth="130.0" onMouseClicked="#mouseClicked" pickOnBounds="true">
@@ -127,7 +127,7 @@
                                     <Insets right="5.0" />
                                  </HBox.margin>
                                  <cursor>
-                                    <Cursor fx:constant="HAND" />
+                                    <Cursor fx:constant="DEFAULT" />
                                  </cursor>
                               </ImageView>
                               <ImageView fx:id="infantil3" fitHeight="230.0" fitWidth="130.0" onMouseClicked="#mouseClicked" pickOnBounds="true">
@@ -135,12 +135,12 @@
                                     <Insets right="5.0" />
                                  </HBox.margin>
                                  <cursor>
-                                    <Cursor fx:constant="HAND" />
+                                    <Cursor fx:constant="DEFAULT" />
                                  </cursor>
                               </ImageView>
                               <ImageView fx:id="infantil4" fitHeight="230.0" fitWidth="130.0" onMouseClicked="#mouseClicked" pickOnBounds="true">
                                  <cursor>
-                                    <Cursor fx:constant="HAND" />
+                                    <Cursor fx:constant="DEFAULT" />
                                  </cursor>
                               </ImageView>
                               <Label fx:id="infantilFDerecha" onMouseClicked="#mouseClicked" text="&gt;" textFill="WHITE">
@@ -173,7 +173,7 @@
                         </Label>
                         <HBox alignment="CENTER" prefHeight="157.0" prefWidth="579.0">
                            <children>
-                              <Label text="&lt;" textFill="WHITE">
+                              <Label fx:id="juvenilesFIzq" onMouseClicked="#mouseClicked" text="&lt;" textFill="WHITE">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -184,36 +184,36 @@
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
                               </Label>
-                              <ImageView fitHeight="230.0" fitWidth="130.0" pickOnBounds="true">
-                                 <image>
-                                    <Image url="@../images/PortadaJ1.jpg" />
-                                 </image>
+                              <ImageView fx:id="juvenil1" fitHeight="230.0" fitWidth="130.0" onMouseClicked="#mouseClicked" pickOnBounds="true">
                                  <HBox.margin>
                                     <Insets right="5.0" />
                                  </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
                               </ImageView>
-                              <ImageView fitHeight="230.0" fitWidth="130.0" pickOnBounds="true">
-                                 <image>
-                                    <Image url="@../images/PortadaJ2.jpg" />
-                                 </image>
+                              <ImageView fx:id="juvenil2" fitHeight="230.0" fitWidth="130.0" onMouseClicked="#mouseClicked" pickOnBounds="true">
                                  <HBox.margin>
                                     <Insets right="5.0" />
                                  </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
                               </ImageView>
-                              <ImageView fitHeight="230.0" fitWidth="130.0" pickOnBounds="true">
-                                 <image>
-                                    <Image url="@../images/PortadaJ3.jpg" />
-                                 </image>
+                              <ImageView fx:id="juvenil3" fitHeight="230.0" fitWidth="130.0" onMouseClicked="#mouseClicked" pickOnBounds="true">
                                  <HBox.margin>
                                     <Insets right="5.0" />
                                  </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
                               </ImageView>
-                              <ImageView fitHeight="230.0" fitWidth="130.0" pickOnBounds="true">
-                                 <image>
-                                    <Image url="@../images/PortadaJ4.jpg" />
-                                 </image>
+                              <ImageView fx:id="juvenil4" fitHeight="230.0" fitWidth="130.0" onMouseClicked="#mouseClicked" pickOnBounds="true">
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
                               </ImageView>
-                              <Label fx:id="juvenilesFIzq" text="&gt;" textFill="WHITE">
+                              <Label fx:id="juvenilesFDer" onMouseClicked="#mouseClicked" text="&gt;" textFill="WHITE">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -243,7 +243,7 @@
                         </Label>
                         <HBox alignment="CENTER" prefHeight="157.0" prefWidth="579.0">
                            <children>
-                              <Label text="&lt;" textFill="WHITE">
+                              <Label fx:id="clasicosFIzq" onMouseClicked="#mouseClicked" text="&lt;" textFill="WHITE">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -254,36 +254,36 @@
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
                               </Label>
-                              <ImageView fitHeight="230.0" fitWidth="130.0" pickOnBounds="true">
-                                 <image>
-                                    <Image url="@../images/PortadaC1.jpg" />
-                                 </image>
+                              <ImageView fx:id="clasicos1" fitHeight="230.0" fitWidth="130.0" onMouseClicked="#mouseClicked" pickOnBounds="true">
                                  <HBox.margin>
                                     <Insets right="5.0" />
                                  </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
                               </ImageView>
-                              <ImageView fitHeight="230.0" fitWidth="130.0" pickOnBounds="true">
-                                 <image>
-                                    <Image url="@../images/PortadaC2.jpg" />
-                                 </image>
+                              <ImageView fx:id="clasicos2" fitHeight="230.0" fitWidth="130.0" onMouseClicked="#mouseClicked" pickOnBounds="true">
                                  <HBox.margin>
                                     <Insets right="5.0" />
                                  </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
                               </ImageView>
-                              <ImageView fitHeight="230.0" fitWidth="130.0" pickOnBounds="true">
-                                 <image>
-                                    <Image url="@../images/PortadaC3.jpg" />
-                                 </image>
+                              <ImageView fx:id="clasicos3" fitHeight="230.0" fitWidth="130.0" onMouseClicked="#mouseClicked" pickOnBounds="true">
                                  <HBox.margin>
                                     <Insets right="5.0" />
                                  </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
                               </ImageView>
-                              <ImageView fitHeight="230.0" fitWidth="130.0" pickOnBounds="true">
-                                 <image>
-                                    <Image url="@../images/PortadaC4.jpg" />
-                                 </image>
+                              <ImageView fx:id="clasicos4" fitHeight="230.0" fitWidth="130.0" onMouseClicked="#mouseClicked" pickOnBounds="true">
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
                               </ImageView>
-                              <Label text="&gt;" textFill="WHITE">
+                              <Label fx:id="clasicosFDer" onMouseClicked="#mouseClicked" text="&gt;" textFill="WHITE">
                                  <font>
                                     <Font size="20.0" />
                                  </font>

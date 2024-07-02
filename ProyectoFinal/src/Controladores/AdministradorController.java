@@ -1,10 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
 package Controladores;
 
 import Classes.Archivos;
+import Classes.Nodos.NodoProducto;
+import Classes.ProductoTabla;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -27,9 +25,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
@@ -53,8 +53,19 @@ public class AdministradorController implements Initializable {
     private TextArea adminNDes;
     @FXML
     private TextField adminNLibro;
+    
+    // TABLA
     @FXML
-    private TableView<?> adminTabla;
+    private TableView<ProductoTabla> adminTabla;
+    @FXML
+    private TableColumn<ProductoTabla, String> columna1;
+    @FXML
+    private TableColumn<ProductoTabla, String> columna2;
+    @FXML
+    private TableColumn<ProductoTabla, String> columna3;
+    @FXML
+    private TableColumn<ProductoTabla, String> columna4;
+    ///////////////////////////////////
     @FXML
     private Button botonCrear;
     @FXML
@@ -158,6 +169,7 @@ public class AdministradorController implements Initializable {
                 Productos.insertarCola(nombreLibro, nombreAutor, descripcion, imagen, tipo, precio);
                 ar.escribirProductos();
                 limpiarCamposCrear();
+                actualizarTablas();
                 JOptionPane.showMessageDialog(null, "¡Libro creado exitosamente!");
             }else{
                 JOptionPane.showMessageDialog(null, "Todos los campos son obligatorios");
@@ -168,6 +180,8 @@ public class AdministradorController implements Initializable {
                 if(Productos.existeID(Integer.parseInt(adminIdLibro.getText()))){
                     Productos.eliminarCola(Integer.parseInt(adminIdLibro.getText()));
                     ar.escribirProductos();
+                    adminIdLibro.setText("");
+                    actualizarTablas();
                     JOptionPane.showMessageDialog(null, "¡Elemento eliminado correctamente!");
                 }else{
                     JOptionPane.showMessageDialog(null, "Elemento no existe, ingrese un id valido");
@@ -226,10 +240,42 @@ public class AdministradorController implements Initializable {
         this.setImagen("");
     }
     
+    private void actualizarTablas(){
+        ArrayList<NodoProducto> arProductos = Productos.obtenerNodosCola();
+        ObservableList<ProductoTabla> datos = FXCollections.observableArrayList();
+        limpiarColumnas();
+        for(int i = 0; i < arProductos.size(); i++){
+            String titulo = arProductos.get(i).nombre;
+            String autor = arProductos.get(i).autor;
+            String id = String.valueOf(arProductos.get(i).id);
+            String categoria = arProductos.get(i).tipo;
+            ProductoTabla pt = new ProductoTabla(titulo, autor, id, categoria);
+            datos.add(pt);
+        }
+        adminTabla.setItems(datos);
+
+    }
+    
+    private void limpiarColumnas(){
+        adminTabla.getItems().clear();
+    }
+    
+    private void settearPropiedadesColumnas(){
+    columna1.setCellValueFactory(new PropertyValueFactory<>("titulo"));
+    columna2.setCellValueFactory(new PropertyValueFactory<>("autor"));
+    columna3.setCellValueFactory(new PropertyValueFactory<>("id"));
+    columna4.setCellValueFactory(new PropertyValueFactory<>("categoria"));
+    }
+    
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         comboRegistro.setItems(listaOpciones);
         comboRegistro.setValue("Infantiles");
+        
+        // Tablas
+        settearPropiedadesColumnas();
+        actualizarTablas();
     }    
 
 
